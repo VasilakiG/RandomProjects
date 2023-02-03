@@ -1,5 +1,5 @@
 ## Introduction
-This code is written for Arduino boards, it uses the Arduino.h library to control the board and read from the sensor and button. The purpose of the code is to measure the length of a pendulum using a color sensor and calculate the average period of its oscillations.
+This code is written for Arduino boards, it uses the `Arduino.h` library to control the board and read from the sensor and button. The purpose of the code is to measure the length of a pendulum using a color sensor and calculate the average period of its oscillations.
 
 ## Variables
 `sensorPin`: This integer variable represents the analog pin of the color sensor that is connected to the Arduino board.
