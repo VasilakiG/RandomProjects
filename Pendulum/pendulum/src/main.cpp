@@ -1,13 +1,16 @@
 #include <Arduino.h>
 
-// char DELIM = '\t';
+// Pin definitions
 int sensorPin = PIN_A1;
 int resetButton = PIN2;
 long baud_rate = 9600;
+// char DELIM = '\t';
 
+// Boolean flag to control the calibration process
 bool hasRun = false;
 bool eq_state = false;
 
+// Variables for storing time, period and pendulum length
 float timeCounter = 0;
 float prevTime = 0;
 float currTime = 0;
@@ -17,6 +20,7 @@ float hits[11];
 float firstHit = 0;
 float length = 0;
 
+// Variables for storing event number and light threshold
 int event = 0;
 int eq_state_light = 0;
 
@@ -33,7 +37,7 @@ void setup()
 
   Serial.begin(baud_rate);
 
-  pinMode(resetButton, INPUT_PULLUP);
+  pinMode(resetButton, INPUT);
   pinMode(sensorPin, INPUT); //_PULLUP
   pinMode(13, OUTPUT);
 
@@ -49,27 +53,35 @@ void setup()
 
 void loop()
 {
-  if (hasRun == false)
+  // Wait for reset button to be pressed
+  if (!hasRun)
   {
     // clearscreen();
+
+    // Calibrate the sensor
+    Serial.println("======================");
     Serial.println("Calibrating the sensor...");
+    Serial.println("======================");
 
     eq_state_light = analogRead(sensorPin) - 10;
     eq_state = true;
 
-    while (true)
+    while (eq_state)
     {
       if (analogRead(sensorPin) < eq_state_light)
       {
-        Serial.println("Ball left the eq state");
+        Serial.println("======================");
+        Serial.println("Ball left the equilibrium state");
+        Serial.println("======================");
         eq_state = false;
         break;
       }
 
       // clearscreen();
-      Serial.println("Color Sensor RAW:" + analogRead(sensorPin));
+      Serial.println("Sensor value:" + analogRead(sensorPin));
     }
 
+    // Record the time of 10 pendulum swings
     timeCounter = 0;
     prevTime = millis() / 1000.0;
 
@@ -78,7 +90,7 @@ void loop()
       hits[i] = 0.0;
     }
 
-    while (true)
+    while (event < 10)
     {
       //-- -- -- -- -- - Time Handling -- -- -- -- -- -- -- -
       currTime = millis() / 1000.0;
@@ -86,24 +98,23 @@ void loop()
       prevTime = currTime;
       //-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
+      // Check if the pendulum has swung
       if (analogRead(sensorPin) >= eq_state_light)
       {
         hits[event] = timeCounter;
-        Serial.print("Hit RAW:");
+        Serial.print("Time hit:");
         Serial.println(timeCounter);
         delay(500);
         event++;
-        if (event > 10)
-        {
-          break;
-        }
       }
     }
 
     // clearscreen();
+
+    // Calculate the period and length of the pendulum
     firstHit = hits[0];
-    Serial.println("-------- DONE --------");
-    Serial.println("Hits shifted by the first hit value...");
+    Serial.println("======== DONE ========");
+    Serial.println("Results:");
 
     for (int i = 0; i < 10; i++)
     {
@@ -123,6 +134,7 @@ void loop()
     period = halfPeriod * 2.0;
     length = period * period * 9.81 / (4.0 * PI * PI);
 
+    Serial.println("======================");
     Serial.print("Average Period: ");
     Serial.print(period);
     Serial.println("s");
@@ -134,6 +146,7 @@ void loop()
     Serial.print("Length of the pendulum is: ");
     Serial.print(period * 100.0);
     Serial.println("cm");
+    Serial.println("======================");
 
     hasRun = true;
     delay(1000);
