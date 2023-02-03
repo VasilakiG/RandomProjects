@@ -61,4 +61,4 @@ The calculated length of the pendulum is displayed on the serial monitor in mete
 If the `resetButton` is pressed, the code is set to run again.
 
 ## Conclusion
-This method for determining lengtg of a pendulum is only useful in cases of small angles of swinging. For big angles and long lenths of the pendulum it is not effective.
+This method for determining length of a pendulum is only useful in cases of small angles of swinging. For big angles and long lenths of the pendulum it is not effective.
