@@ -1,3 +1,5 @@
+$${\color{red}Welcome \space \color{lightblue}To \space \color{orange}Stackoverflow}$$
+
 This is an Arduino code that measures the length of a pendulum using a sensor and a reset button. The following comments describe the code:
 
 $${\color{red}char DELIM = '\t'}$$;: This line is commented out, but it defines a character variable DELIM that separates columns in a tab-delimited file.
