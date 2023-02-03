@@ -4,7 +4,7 @@ This code is written for Arduino boards, it uses the Arduino.h library to contro
 ## Variables
 sensorPin: This integer variable represents the analog pin of the color sensor that is connected to the Arduino board.
 
-`$${\color{orange}resetButton}$$`: This integer variable represents the digital pin of the button that is connected to the Arduino board.
+$${\color{orange}resetButton}$$: This integer variable represents the digital pin of the button that is connected to the Arduino board.
 
 baud_rate: This long variable represents the baud rate of the serial communication that is used to display the results on the serial monitor.
 
