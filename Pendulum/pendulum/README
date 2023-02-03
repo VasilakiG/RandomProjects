@@ -1,1 +1,41 @@
+This is an Arduino code that measures the length of a pendulum using a sensor and a reset button. The following comments describe the code:
 
+char DELIM = '\t';: This line is commented out, but it defines a character variable DELIM that separates columns in a tab-delimited file.
+
+int sensorPin = PIN_A1;: This line sets the analog input pin for the sensor to A1.
+
+int resetButton = PIN2;: This line sets the digital input pin for the reset button to 2.
+
+long baud_rate = 9600;: This line sets the baud rate of the serial communication between the Arduino and the computer to 9600 bits per second.
+
+bool hasRun = false;: This line initializes a boolean variable hasRun that indicates whether the program has run once.
+
+bool eq_state = false;: This line initializes a boolean variable eq_state that indicates whether the pendulum is in the state of rest (equilibrium).
+
+float timeCounter = 0;: This line initializes a floating-point variable timeCounter that counts the elapsed time.
+
+float prevTime = 0;: This line initializes a floating-point variable prevTime that stores the previous value of the elapsed time.
+
+float currTime = 0;: This line initializes a floating-point variable currTime that stores the current value of the elapsed time.
+
+float period = 0;: This line initializes a floating-point variable period that stores the period of the pendulum.
+
+float halfPeriod = 0;: This line initializes a floating-point variable halfPeriod that stores half of the period of the pendulum.
+
+float hits[11];: This line initializes an array of 11 floating-point variables hits that store the times when the pendulum passes through the state of rest.
+
+float firstHit = 0;: This line initializes a floating-point variable firstHit that stores the time of the first hit of the pendulum.
+
+float length = 0;: This line initializes a floating-point variable length that stores the length of the pendulum.
+
+int event = 0;: This line initializes an integer variable event that counts the number of hits of the pendulum.
+
+int eq_state_light = 0;: This line initializes an integer variable eq_state_light that stores the light level at the state of rest.
+
+void clearscreen(): This function is commented out, but it would clear the serial monitor screen by printing a large number of blank lines.
+
+void setup(): This function sets up the initial configuration of the pins and the serial communication.
+
+void loop(): This function runs repeatedly and performs the main functionality of the code. It calibrates the sensor, waits for the pendulum to leave the state of rest, records the times of the hits, computes the period and the length of the pendulum, and outputs the results to the serial monitor.
+
+Note: Some parts of the code are commented out and may not be used in the current implementation.
