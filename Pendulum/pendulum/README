@@ -1,8 +1,8 @@
 This is an Arduino code that measures the length of a pendulum using a sensor and a reset button. The following comments describe the code:
 
-!char DELIM = '\t';: This line is commented out, but it defines a character variable DELIM that separates columns in a tab-delimited file.
+! char DELIM = '\t';: This line is commented out, but it defines a character variable DELIM that separates columns in a tab-delimited file.
 
-!int sensorPin = PIN_A1;: This line sets the analog input pin for the sensor to A1.
+! int sensorPin = PIN_A1;: This line sets the analog input pin for the sensor to A1.
 
 int resetButton = PIN2;: This line sets the digital input pin for the reset button to 2.
 
