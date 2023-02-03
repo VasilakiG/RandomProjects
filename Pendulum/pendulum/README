@@ -1,41 +1,64 @@
-This is an Arduino code that measures the length of a pendulum using a sensor and a reset button. The following comments describe the code:
+# Introduction
+This code is written for Arduino boards, it uses the Arduino.h library to control the board and read from the sensor and button. The purpose of the code is to measure the length of a pendulum using a color sensor and calculate the average period of its oscillations.
 
-char DELIM = '\t';: This line is commented out, but it defines a character variable DELIM that separates columns in a tab-delimited file.
+# Variables
+sensorPin: This integer variable represents the analog pin of the color sensor that is connected to the Arduino board.
 
-int sensorPin = PIN_A1;: This line sets the analog input pin for the sensor to A1.
+resetButton: This integer variable represents the digital pin of the button that is connected to the Arduino board.
 
-int resetButton = PIN2;: This line sets the digital input pin for the reset button to 2.
+baud_rate: This long variable represents the baud rate of the serial communication that is used to display the results on the serial monitor.
 
-long baud_rate = 9600;: This line sets the baud rate of the serial communication between the Arduino and the computer to 9600 bits per second.
+hasRun: This boolean variable determines if the code has already been run.
 
-bool hasRun = false;: This line initializes a boolean variable hasRun that indicates whether the program has run once.
+eq_state: This boolean variable determines the state of the pendulum (if it's in an equilibrium state or not).
 
-bool eq_state = false;: This line initializes a boolean variable eq_state that indicates whether the pendulum is in the state of rest (equilibrium).
+timeCounter: This float variable represents the elapsed time between the first and last oscillation.
 
-float timeCounter = 0;: This line initializes a floating-point variable timeCounter that counts the elapsed time.
+prevTime: This float variable stores the previous value of the elapsed time.
 
-float prevTime = 0;: This line initializes a floating-point variable prevTime that stores the previous value of the elapsed time.
+currTime: This float variable stores the current value of the elapsed time.
 
-float currTime = 0;: This line initializes a floating-point variable currTime that stores the current value of the elapsed time.
+period: This float variable represents the average period of the pendulum's oscillations.
 
-float period = 0;: This line initializes a floating-point variable period that stores the period of the pendulum.
+halfPeriod: This float variable represents half the value of the average period.
 
-float halfPeriod = 0;: This line initializes a floating-point variable halfPeriod that stores half of the period of the pendulum.
+hits: This float array stores the time of each oscillation.
 
-float hits[11];: This line initializes an array of 11 floating-point variables hits that store the times when the pendulum passes through the state of rest.
+firstHit: This float variable stores the time of the first oscillation.
 
-float firstHit = 0;: This line initializes a floating-point variable firstHit that stores the time of the first hit of the pendulum.
+length: This float variable represents the calculated length of the pendulum.
 
-float length = 0;: This line initializes a floating-point variable length that stores the length of the pendulum.
+event: This integer variable counts the number of oscillations that have occurred.
 
-int event = 0;: This line initializes an integer variable event that counts the number of hits of the pendulum.
+eq_state_light: This integer variable stores the initial light value that is used to determine the pendulum's state.
 
-int eq_state_light = 0;: This line initializes an integer variable eq_state_light that stores the light level at the state of rest.
+## Setup
+The setup() function initializes the board and sets the necessary pins and variables to their initial values.
 
-void clearscreen(): This function is commented out, but it would clear the serial monitor screen by printing a large number of blank lines.
+The serial communication is started with a baud rate of 9600.
 
-void setup(): This function sets up the initial configuration of the pins and the serial communication.
+The resetButton and sensorPin pins are set to inputs.
 
-void loop(): This function runs repeatedly and performs the main functionality of the code. It calibrates the sensor, waits for the pendulum to leave the state of rest, records the times of the hits, computes the period and the length of the pendulum, and outputs the results to the serial monitor.
+The LED on pin 13 is set to an output.
 
-Note: Some parts of the code are commented out and may not be used in the current implementation.
+## Loop
+The loop() function is the main part of the code that reads from the sensor and calculates the length of the pendulum.
+
+If the code has not been run before, the function starts by calibrating the sensor and measuring the time between each oscillation.
+
+The first oscillation is used to determine the state of the pendulum. If it's in an equilibrium state, the code waits until it leaves this state.
+
+The elapsed time between each oscillation is calculated and stored in the hits array.
+
+Once 10 oscillations have been recorded, the first hit is subtracted from each value in the hits array.
+
+The average period of the pendulum's oscillations is calculated by taking the average of half the elapsed time between each oscillation.
+
+The length of the pendulum is calculated using the formula length = period^2 * 9.81 / (4 * PI^2).
+
+The calculated length of the pendulum is displayed on the serial monitor in meters and centimeters.
+
+If the resetButton is pressed, the code is set to run again.
+
+# Conclusion
+This code measures the length of a pendulum using a color
