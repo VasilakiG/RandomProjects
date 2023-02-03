@@ -1,7 +1,7 @@
-# Introduction
+## Introduction
 This code is written for Arduino boards, it uses the Arduino.h library to control the board and read from the sensor and button. The purpose of the code is to measure the length of a pendulum using a color sensor and calculate the average period of its oscillations.
 
-# Variables
+## Variables
 sensorPin: This integer variable represents the analog pin of the color sensor that is connected to the Arduino board.
 
 resetButton: This integer variable represents the digital pin of the button that is connected to the Arduino board.
@@ -32,7 +32,7 @@ event: This integer variable counts the number of oscillations that have occurre
 
 eq_state_light: This integer variable stores the initial light value that is used to determine the pendulum's state.
 
-## Setup
+### Setup
 The setup() function initializes the board and sets the necessary pins and variables to their initial values.
 
 The serial communication is started with a baud rate of 9600.
@@ -41,7 +41,7 @@ The resetButton and sensorPin pins are set to inputs.
 
 The LED on pin 13 is set to an output.
 
-## Loop
+### Loop
 The loop() function is the main part of the code that reads from the sensor and calculates the length of the pendulum.
 
 If the code has not been run before, the function starts by calibrating the sensor and measuring the time between each oscillation.
@@ -60,5 +60,5 @@ The calculated length of the pendulum is displayed on the serial monitor in mete
 
 If the resetButton is pressed, the code is set to run again.
 
-# Conclusion
+## Conclusion
 This code measures the length of a pendulum using a color
