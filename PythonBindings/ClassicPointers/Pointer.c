@@ -22,7 +22,7 @@ void ConsumePointer(int* ptr) {
     }
 }
 
-void ConsumePointerOfPointers(int** ptr_array, int size) {
+void ConsumePointerOfPointers(int** ptr_array, const int size) {
     for (int i = 0; i < size; i++) {
         if (ptr_array[i] != NULL) {
             printf("Value pointed to by ptr_array[%d]: %d\n", i, *ptr_array[i]);

@@ -14,6 +14,7 @@ int main() {
     printf("Insert a value for the pointer: ");
     scanf("%d", &value);
 
+    printf("=========Testing ClassicPointers:=========\n");
     // Use PointerProducer to get a new pointer
     int* producedPtr = ProducePointer(value);
     if (producedPtr != NULL) {
@@ -35,6 +36,31 @@ int main() {
     for (int i = 0; i < size; ++i) {
         if (pointerArray[i] != NULL) {
             free(pointerArray[i]);
+        }
+    }
+
+    printf("=========Testing CustomPointers:=========\n");
+    // Use CustomPointerProducer to get a new custom pointer
+    CustomPointer* producedCustomPtr = ProduceCustomPointer(value, value);
+    if (producedCustomPtr != NULL) {
+        // Use CustomPointerConsumer to consume the custom pointer
+        ConsumeCustomPointer(producedCustomPtr);
+        free(producedCustomPtr);
+    }
+
+    // Create an array of pointers for PointerOfPointersConsumer
+    CustomPointer* customPointerArray[size];
+    for (int i = 0; i < size; ++i) {
+        customPointerArray[i] = ProduceCustomPointer(value, value); // Producing pointers and storing them in the array
+    }
+
+    // Use CustomPointerOfPointersConsumer to consume the array of pointers
+    ConsumeCustomPointerOfPointers(customPointerArray, size);
+
+    // Freeing the pointers created for the customPointerArray
+    for (int i = 0; i < size; ++i) {
+        if (customPointerArray[i] != NULL) {
+            free(customPointerArray[i]);
         }
     }
 
