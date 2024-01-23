@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 CustomPointer* ProduceCustomPointer(const int value1, const int value2) {
-    CustomPointer* ptr = (CustomPointer*)malloc(sizeof(CustomPointer));
+    CustomPointer* ptr = malloc(sizeof(CustomPointer));
     if (ptr != NULL) {
         ptr->value1 = value1; // Initialize value1 (you can set it to your desired value)
         ptr->value2 = value2; // Initialize value2 (you can set it to your desired value)

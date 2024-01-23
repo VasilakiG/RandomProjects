@@ -23,6 +23,8 @@ if __name__ == "__main__":
     pointer = classicPointers.ProducePointer(ctypes.c_int(value))
     # Consume the produced pointer
     classicPointers.ConsumePointer(pointer)
+    # Free the pointer
+    classicPointers.free(pointer)
 
     # Set the return type of the function, None is the equivalent of void
     classicPointers.ConsumePointerOfPointers.restype = None

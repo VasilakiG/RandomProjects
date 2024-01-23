@@ -18,7 +18,6 @@ int* ProducePointer(int value) {
 void ConsumePointer(int* ptr) {
     if (ptr != NULL) {
         printf("Value pointed to by ptr: %d\n", *ptr);
-        free(ptr); // Assume responsibility for freeing the allocated memory
     }
 }
 
