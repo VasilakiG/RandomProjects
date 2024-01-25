@@ -8,6 +8,9 @@ class CustomPointer(ctypes.Structure):
 CustomPointer._fields_ = [("value1", ctypes.c_int),
                           ("value2", ctypes.c_int)]
 
+INSUFFICIENT_SIZE = -2
+SUCCESS = 0
+
 if __name__ == "__main__":
     # Sample data to be used
     value = 6
@@ -137,6 +140,31 @@ if __name__ == "__main__":
     print("-Done!")
 
     print("=====================================================")
-    print("END OF TESTS")
+    print("Test of the buffer behaviour of the GetOption function")
     print("=====================================================")
 
+    customPointers.CP_GetOption.restype = ctypes.c_int
+
+    key = ctypes.create_string_buffer(b"option2")
+    bufferSize = ctypes.c_int(256)
+    buffer = ctypes.create_string_buffer(bufferSize.value)
+
+    #buffer = None
+
+    if buffer is None:
+        result = customPointers.CP_GetOption(ctypes.pointer(key), buffer, ctypes.pointer(bufferSize))
+    else:
+        result = customPointers.CP_GetOption(ctypes.pointer(key), ctypes.pointer(buffer), ctypes.pointer(bufferSize))
+
+    if result == SUCCESS:
+        print("Value of", key.value.decode('UTF-8'), "is:", buffer.value.decode('UTF-8'))
+    elif result == INSUFFICIENT_SIZE:
+        print("Size is too small\n")
+    elif result > SUCCESS:
+        print("Size is ", result)
+    else:
+        print("Option not found, ", result)
+
+    print("=====================================================")
+    print("END OF TESTS")
+    print("=====================================================")
