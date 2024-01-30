@@ -75,14 +75,16 @@ int main()
     }
 
     printf("=========Testing GetOption:=========\n");
-    int sizeOfBuffer = 256;
-    char buffer[sizeOfBuffer];
+    int sizeValue = 50;
+    int* sizeOfBuffer = &sizeValue;
+    char buffer[*sizeOfBuffer];
+    char *key = "option2";
 
-    const int result = CP_GetOption("option2", buffer, sizeOfBuffer);
+    const int result = CP_GetOption(key, buffer, sizeOfBuffer);
 
     if (result == 0)
     {
-        printf("Value of option1: %s\n", buffer);
+        printf("Value of %s: %s\n", key, buffer);
     }
     else if (result == -2)
     {
@@ -95,6 +97,27 @@ int main()
     else
     {
         printf("Option not found\n");
+    }
+
+    printf("=========Testing FillArrayOfPointers:=========\n");
+    CustomPointer** ptr_array = NULL;
+
+    FillCustomPointerOfPointers(&ptr_array, size);
+
+    //int ptr_array_size = sizeof(&ptr_array) / sizeof(&ptr_array[0]);
+
+    for (int i = 0; i < size; i++)
+    {
+        printf("(c)Value1 of %d element is: %d\n", i, ptr_array[i]->value1);
+        printf("(c)Value2 of %d element is: %d\n", i, ptr_array[i]->value2);
+    }
+
+    for (int i = 0; i < size; i++)
+    {
+        if (ptr_array[i] != NULL)
+        {
+            free(ptr_array[i]);
+        }
     }
 
     return 0;

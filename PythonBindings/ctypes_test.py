@@ -8,8 +8,6 @@ class CustomPointer(ctypes.Structure):
 CustomPointer._fields_ = [("value1", ctypes.c_int),
                           ("value2", ctypes.c_int)]
 
-INSUFFICIENT_SIZE = -2
-SUCCESS = 0
 
 if __name__ == "__main__":
     # Sample data to be used
@@ -143,6 +141,9 @@ if __name__ == "__main__":
     print("Test of the buffer behaviour of the GetOption function")
     print("=====================================================")
 
+    INSUFFICIENT_SIZE   = -2
+    SUCCESS             =  0
+
     customPointers.CP_GetOption.restype = ctypes.c_int
 
     key = ctypes.create_string_buffer(b"option2")
@@ -165,6 +166,29 @@ if __name__ == "__main__":
     else:
         print("Option not found, ", result)
 
+    print("=====================================================")
+    print("Test if ptr can be filled with data from C and read in Python")
+    print("=====================================================")
+
+    customPointers.FillCustomPointerOfPointers.restype = None
+    # customPointers.FillCustomPointerOfPointers.argtypes = [ctypes.POINTER(CustomPointer),
+    #                                                        ctypes.c_int]
+    ptr_array = (ctypes.POINTER(ctypes.POINTER(CustomPointer)) * 1)()
+
+    customPointers.FillCustomPointerOfPointers(ptr_array, ctypes.c_int(size))
+
+    # for i in range(size):
+    #     print("Value1 of the element of the array: ", ptr_array[i].contents.contents.value1)
+    #     print("Value2 of the element of the array: ", ptr_array[i].contents.contents.value2)
+    customPointers.ConsumeCustomPointerOfPointers(*ptr_array, ctypes.c_int(size))
+
+    # Free the pointers
+    for i in range(len(ptr_array)):
+        if ptr_array[i] is not None:  # Check if the pointer is not null
+            for j in range(size):
+                if ptr_array[i][j] is not None:
+                    customPointers.free(ptr_array[i][j])
+            customPointers.free(ptr_array[i])
     print("=====================================================")
     print("END OF TESTS")
     print("=====================================================")

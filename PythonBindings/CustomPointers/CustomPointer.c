@@ -43,6 +43,39 @@ void ConsumeCustomPointerOfPointers(CustomPointer** ptr_array, const int size)
     }
 }
 
+void FillCustomPointerOfPointers(CustomPointer*** ptr_array, const int size)
+{
+    if (*ptr_array == NULL)
+    {
+        printf("Pointer array is empty\n");
+    }
+
+    printf("Allocating space for the new size...\n");
+    CustomPointer** new_ptr_arr = malloc(sizeof(CustomPointer*) * size);
+    printf("-Done!\n");
+
+    int ptr_array_size = 0;
+
+    for (int i = 0; i < size; i++)
+    {
+        printf("Allocating memory for the %dth pointer inside the array...\n", i);
+        new_ptr_arr[i] = malloc(sizeof(CustomPointer));
+        printf("-Done!\n");
+
+        printf("Filling the pointer with values...\n");
+        if (new_ptr_arr[i] != NULL)
+        {
+            new_ptr_arr[i]->value1 = 1;
+            new_ptr_arr[i]->value2 = 2;
+            ptr_array_size++;
+        }
+        printf("-Done!\n");
+    }
+
+    *ptr_array = new_ptr_arr;
+    printf("Filled Pointer Array with %d elements:\n", ptr_array_size);
+}
+
 struct KeyValue configOptions[] =
 {
     { "option1", "value1" },

@@ -22,5 +22,6 @@ struct KeyValue {
 CustomPointer* ProduceCustomPointer(int value1, int value2);
 void ConsumeCustomPointer(CustomPointer* ptr);
 void ConsumeCustomPointerOfPointers(CustomPointer** ptr_array, int size);
+void FillCustomPointerOfPointers(CustomPointer*** ptr_array, int size);
 
 int CP_GetOption(char *key, char *buffer, int *size);
