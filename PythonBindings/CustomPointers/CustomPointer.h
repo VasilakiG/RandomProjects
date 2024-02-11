@@ -25,3 +25,4 @@ void ConsumeCustomPointerOfPointers(CustomPointer** ptr_array, int size);
 void FillCustomPointerOfPointers(CustomPointer*** ptr_array, int size);
 
 int CP_GetOption(char *key, char *buffer, int *size);
+//void EventCount(void* referenceCounter);

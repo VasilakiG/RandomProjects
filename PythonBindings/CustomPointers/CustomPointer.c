@@ -121,3 +121,11 @@ int CP_GetOption(char *key, char *buffer, int *size)
     // Key not found
     return FAILURE;
 }
+
+// void MyDeviceEventFunction(void* referenceCounter)
+// {
+//     int *eventCounter = (int*)referenceCounter;
+//     *eventCounter += 1;
+//
+//     printf("Event #%d", *eventCounter);
+// }

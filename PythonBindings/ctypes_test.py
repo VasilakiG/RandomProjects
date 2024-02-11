@@ -189,6 +189,38 @@ if __name__ == "__main__":
                 if ptr_array[i][j] is not None:
                     customPointers.free(ptr_array[i][j])
             customPointers.free(ptr_array[i])
+
+    print("=====================================================")
+    print("Test of pointer casting inside C++")
+    print("=====================================================")
+
+    pointerCasting = ctypes.CDLL("./Libraries/pointerCasting.so")
+
+    print("Initializing void pointer...")
+    referenceCounter = ctypes.c_void_p()
+    referenceCounter.value = 1
+    print("Done!")
+
+    print("Calling the EventCounter function")
+    pointerCasting.EventCounter.restype = None
+
+    pointerCasting.EventCounter(ctypes.byref(referenceCounter))
+    print("Done!")
+
+    print("=====================================================")
+    print("Test of pointer casting inside Python")
+    print("=====================================================")
+
+    def PointerCasting(refCounter) -> None:
+        print("Casting the void pointer to int pointer...")
+        eventCounter = ctypes.cast(refCounter, ctypes.POINTER(ctypes.c_int))
+        print("Done!")
+        eventCounter.contents.value += 1
+        print(f"Event #{eventCounter.contents.value}")
+
+
+    PointerCasting(ctypes.byref(referenceCounter))
+
     print("=====================================================")
     print("END OF TESTS")
     print("=====================================================")
