@@ -1,0 +1,595 @@
+Position: 1
+Index: 211079
+Summed points: 54.42
+Theory points: 27.42
+Practical points: 27.0
+Group: 1
+
+Position: 2
+Index: 211255
+Summed points: 51.17
+Theory points: 26.17
+Practical points: 25.0
+Group: 1
+
+Position: 3
+Index: 211047
+Summed points: 50.85
+Theory points: 23.85
+Practical points: 27.0
+Group: 1
+
+Position: 4
+Index: 213010
+Summed points: 49.27
+Theory points: 27.27
+Practical points: 22.0
+Group: 1
+
+Position: 5
+Index: 211007
+Summed points: 49.0
+Theory points: 25.0
+Practical points: 24.0
+Group: 1
+
+Position: 6
+Index: 211151
+Summed points: 48.92
+Theory points: 24.92
+Practical points: 24.0
+Group: 1
+
+Position: 7
+Index: 211046
+Summed points: 48.05
+Theory points: 25.05
+Practical points: 23.0
+Group: 1
+
+Position: 8
+Index: 211025
+Summed points: 47.53
+Theory points: 27.53
+Practical points: 20.0
+Group: 1
+
+Position: 9
+Index: 211016
+Summed points: 47.0
+Theory points: 26.5
+Practical points: 20.5
+Group: 1
+
+Position: 10
+Index: 211154
+Summed points: 46.98
+Theory points: 25.98
+Practical points: 21.0
+Group: 1
+
+Position: 11
+Index: 211174
+Summed points: 46.98
+Theory points: 22.98
+Practical points: 24.0
+Group: 1
+
+Position: 12
+Index: 211006
+Summed points: 46.96
+Theory points: 24.96
+Practical points: 22.0
+Group: 1
+
+Position: 13
+Index: 211090
+Summed points: 46.83
+Theory points: 25.83
+Practical points: 21.0
+Group: 1
+
+Position: 14
+Index: 211017
+Summed points: 46.5
+Theory points: 26.0
+Practical points: 20.5
+Group: 1
+
+Position: 15
+Index: 211027
+Summed points: 46.48
+Theory points: 26.48
+Practical points: 20.0
+Group: 1
+
+Position: 16
+Index: 211009
+Summed points: 46.47
+Theory points: 25.47
+Practical points: 21.0
+Group: 1
+
+Position: 17
+Index: 211161
+Summed points: 46.27
+Theory points: 20.27
+Practical points: 26.0
+Group: 1
+
+Position: 18
+Index: 211158
+Summed points: 46.1
+Theory points: 26.1
+Practical points: 20.0
+Group: 1
+
+Position: 19
+Index: 211110
+Summed points: 45.5
+Theory points: 23.5
+Practical points: 22.0
+Group: 1
+
+Position: 20
+Index: 211035
+Summed points: 45.2
+Theory points: 22.2
+Practical points: 23.0
+Group: 1
+
+Position: 21
+Index: 211086
+Summed points: 44.96
+Theory points: 20.96
+Practical points: 24.0
+Group: 1
+
+Position: 22
+Index: 211012
+Summed points: 44.01
+Theory points: 21.01
+Practical points: 23.0
+Group: 1
+
+Position: 23
+Index: 191096
+Summed points: 43.58
+Theory points: 25.08
+Practical points: 18.5
+Group: 1
+
+Position: 24
+Index: 211165
+Summed points: 43.37
+Theory points: 23.37
+Practical points: 20.0
+Group: 1
+
+Position: 25
+Index: 211028
+Summed points: 42.83
+Theory points: 24.83
+Practical points: 18.0
+Group: 1
+
+Position: 26
+Index: 211063
+Summed points: 42.33
+Theory points: 25.33
+Practical points: 17.0
+Group: 1
+
+Position: 27
+Index: 211032
+Summed points: 42.33
+Theory points: 22.33
+Practical points: 20.0
+Group: 1
+
+Position: 28
+Index: 211244
+Summed points: 42.33
+Theory points: 19.33
+Practical points: 23.0
+Group: 1
+
+Position: 29
+Index: 211284
+Summed points: 42.27
+Theory points: 24.27
+Practical points: 18.0
+Group: 1
+
+Position: 30
+Index: 211107
+Summed points: 42.0
+Theory points: 20.0
+Practical points: 22.0
+Group: 1
+
+Position: 31
+Index: 211104
+Summed points: 41.97
+Theory points: 19.97
+Practical points: 22.0
+Group: 1
+
+Position: 32
+Index: 211101
+Summed points: 41.87
+Theory points: 21.87
+Practical points: 20.0
+Group: 1
+
+Position: 33
+Index: 211209
+Summed points: 41.67
+Theory points: 20.17
+Practical points: 21.5
+Group: 1
+
+Position: 34
+Index: 211115
+Summed points: 41.33
+Theory points: 19.33
+Practical points: 22.0
+Group: 1
+
+Position: 35
+Index: 211234
+Summed points: 41.32
+Theory points: 21.32
+Practical points: 20.0
+Group: 1
+
+Position: 36
+Index: 212029
+Summed points: 41.0
+Theory points: 24.0
+Practical points: 17.0
+Group: 1
+
+Position: 37
+Index: 211203
+Summed points: 40.83
+Theory points: 26.83
+Practical points: 14.0
+Group: 1
+
+Position: 38
+Index: 211084
+Summed points: 40.72
+Theory points: 20.72
+Practical points: 20.0
+Group: 1
+
+Position: 39
+Index: 211005
+Summed points: 40.48
+Theory points: 23.48
+Practical points: 17.0
+Group: 1
+
+Position: 40
+Index: 211180
+Summed points: 40.42
+Theory points: 22.42
+Practical points: 18.0
+Group: 1
+
+Position: 41
+Index: 211001
+Summed points: 40.33
+Theory points: 24.33
+Practical points: 16.0
+Group: 1
+
+Position: 42
+Index: 211134
+Summed points: 39.9
+Theory points: 20.4
+Practical points: 19.5
+Group: 1
+
+Position: 43
+Index: 211202
+Summed points: 39.83
+Theory points: 25.83
+Practical points: 14.0
+Group: 1
+
+Position: 44
+Index: 211251
+Summed points: 39.5
+Theory points: 24.5
+Practical points: 15.0
+Group: 1
+
+Position: 45
+Index: 213057
+Summed points: 39.0
+Theory points: 24.0
+Practical points: 15.0
+Group: 1
+
+Position: 46
+Index: 211213
+Summed points: 38.87
+Theory points: 17.87
+Practical points: 21.0
+Group: 1
+
+Position: 47
+Index: 211162
+Summed points: 38.77
+Theory points: 23.77
+Practical points: 15.0
+Group: 1
+
+Position: 48
+Index: 216137
+Summed points: 38.37
+Theory points: 25.37
+Practical points: 13.0
+Group: 1
+
+Position: 49
+Index: 201029
+Summed points: 38.36
+Theory points: 25.36
+Practical points: 13.0
+Group: 1
+
+Position: 50
+Index: 211269
+Summed points: 38.33
+Theory points: 23.33
+Practical points: 15.0
+Group: 1
+
+Position: 51
+Index: 211008
+Summed points: 38.31
+Theory points: 21.81
+Practical points: 16.5
+Group: 1
+
+Position: 52
+Index: 211088
+Summed points: 38.1
+Theory points: 20.1
+Practical points: 18.0
+Group: 1
+
+Position: 53
+Index: 211123
+Summed points: 38.0
+Theory points: 22.0
+Practical points: 16.0
+Group: 1
+
+Position: 54
+Index: 211092
+Summed points: 37.83
+Theory points: 24.83
+Practical points: 13.0
+Group: 1
+
+Position: 55
+Index: 211118
+Summed points: 37.67
+Theory points: 24.67
+Practical points: 13.0
+Group: 1
+
+Position: 56
+Index: 211093
+Summed points: 37.52
+Theory points: 20.02
+Practical points: 17.5
+Group: 1
+
+Position: 57
+Index: 211185
+Summed points: 37.5
+Theory points: 15.5
+Practical points: 22.0
+Group: 1
+
+Position: 58
+Index: 211139
+Summed points: 37.05
+Theory points: 20.05
+Practical points: 17.0
+Group: 1
+
+Position: 59
+Index: 211146
+Summed points: 36.83
+Theory points: 21.83
+Practical points: 15.0
+Group: 1
+
+Position: 60
+Index: 211178
+Summed points: 36.81
+Theory points: 24.81
+Practical points: 12.0
+Group: 1
+
+Position: 61
+Index: 211010
+Summed points: 36.67
+Theory points: 19.67
+Practical points: 17.0
+Group: 1
+
+Position: 62
+Index: 211206
+Summed points: 36.47
+Theory points: 21.47
+Practical points: 15.0
+Group: 1
+
+Position: 63
+Index: 212044
+Summed points: 36.44
+Theory points: 21.44
+Practical points: 15.0
+Group: 1
+
+Position: 64
+Index: 211059
+Summed points: 36.33
+Theory points: 20.33
+Practical points: 16.0
+Group: 1
+
+Position: 65
+Index: 211055
+Summed points: 35.67
+Theory points: 20.67
+Practical points: 15.0
+Group: 1
+
+Position: 66
+Index: 211042
+Summed points: 35.35
+Theory points: 20.35
+Practical points: 15.0
+Group: 1
+
+Position: 67
+Index: 211070
+Summed points: 35.17
+Theory points: 18.17
+Practical points: 17.0
+Group: 1
+
+Position: 68
+Index: 183099
+Summed points: 34.81
+Theory points: 16.81
+Practical points: 18.0
+Group: 1
+
+Position: 69
+Index: 211068
+Summed points: 34.69
+Theory points: 17.69
+Practical points: 17.0
+Group: 1
+
+Position: 70
+Index: 191237
+Summed points: 34.48
+Theory points: 20.48
+Practical points: 14.0
+Group: 1
+
+Position: 71
+Index: 211095
+Summed points: 34.05
+Theory points: 18.05
+Practical points: 16.0
+Group: 1
+
+Position: 72
+Index: 211041
+Summed points: 33.17
+Theory points: 22.17
+Practical points: 11.0
+Group: 1
+
+Position: 73
+Index: 211264
+Summed points: 33.17
+Theory points: 19.67
+Practical points: 13.5
+Group: 1
+
+Position: 74
+Index: 211265
+Summed points: 33.1
+Theory points: 19.1
+Practical points: 14.0
+Group: 1
+
+Position: 75
+Index: 211220
+Summed points: 33.03
+Theory points: 16.03
+Practical points: 17.0
+Group: 1
+
+Position: 76
+Index: 211108
+Summed points: 32.89
+Theory points: 18.89
+Practical points: 14.0
+Group: 1
+
+Position: 77
+Index: 205006
+Summed points: 32.63
+Theory points: 19.63
+Practical points: 13.0
+Group: 1
+
+Position: 78
+Index: 211257
+Summed points: 31.38
+Theory points: 16.38
+Practical points: 15.0
+Group: 1
+
+Position: 79
+Index: 211064
+Summed points: 30.26
+Theory points: 16.26
+Practical points: 14.0
+Group: 1
+
+Position: 80
+Index: 211065
+Summed points: 30.0
+Theory points: 16.0
+Practical points: 14.0
+Group: 1
+
+Position: 81
+Index: 211181
+Summed points: 29.42
+Theory points: 15.42
+Practical points: 14.0
+Group: 1
+
+Position: 82
+Index: 211126
+Summed points: 28.47
+Theory points: 16.47
+Practical points: 12.0
+Group: 1
+
+Position: 83
+Index: 211214
+Summed points: 28.31
+Theory points: 15.81
+Practical points: 12.5
+Group: 1
+
+Position: 84
+Index: 211230
+Summed points: 28.0
+Theory points: 17.5
+Practical points: 10.5
+Group: 1
+
+Position: 85
+Index: 191120
+Summed points: 25.67
+Theory points: 15.67
+Practical points: 10.0
+Group: 1
+
